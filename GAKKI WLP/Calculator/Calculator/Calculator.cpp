@@ -22,14 +22,14 @@ void calutaor(int n, ofstream& subject)// 随机出现n个三个 0-100的加减�
 		k = 1 + rand() % 4;// 随机产生 1，2，3，4来模拟加减		
 		if (j == 1 && k == 1)
 		{
-			cout << x << "+" << y << "+" << z << "=" << x + y + z << endl;
+			cout << x << "+" << y << "+" << z << "=" << endl;
 			subject << x << "+" << y << "+" << z << "=" << x + y + z << endl;//记录到subjecttxt文件中
 		}//同时为加的情况
 		else if (j == 1 && k == 2)
 		{
 			if (x + y - z > 0)
 			{
-				cout << x << "+" << y << "-" << z << "=" << x + y - z << endl;
+				cout << x << "+" << y << "-" << z << "=" <<endl;
 				subject << x << "+" << y << "-" << z << "=" << x + y - z << endl;//记录到subjecttxt文件中
 			}
 			else
@@ -37,7 +37,7 @@ void calutaor(int n, ofstream& subject)// 随机出现n个三个 0-100的加减�
 		}//先加后减的情况
 		else if (j == 1 && k == 3)
 		{
-			cout << x << "+" << y << "-" << z << "=" << x + y * z << endl;
+			cout << x << "+" << y << "-" << z << "=" <<endl;
 			subject << x << "+" << y << "-" << z << "=" << x + y * z << endl;//记录到subjecttxt文件中
 		}// 先加后乘的情况
 		else if (j == 1 && k == 4)
@@ -48,7 +48,7 @@ void calutaor(int n, ofstream& subject)// 随机出现n个三个 0-100的加减�
 				o = (double)y / z;
 				if (b == o)
 				{
-					cout << x << "+" << y << "/" << z << "=" << x + y / z << endl;
+					cout << x << "+" << y << "/" << z << "=" <<endl;
 					subject << x << "+" << y << "/" << z << "=" << x + y / z << endl;//记录到subjecttxt文件中
 
 				}
@@ -62,7 +62,7 @@ void calutaor(int n, ofstream& subject)// 随机出现n个三个 0-100的加减�
 		{
 			if (x - y > 0)
 			{
-				cout << x << "-" << y << "+" << z << "=" << x - y + z << endl;
+				cout << x << "-" << y << "+" << z << "=" <<  endl;
 				subject << x << "-" << y << "+" << z << "=" << x - y + z << endl;//记录到subjecttxt文件中
 			}
 			else
@@ -72,7 +72,7 @@ void calutaor(int n, ofstream& subject)// 随机出现n个三个 0-100的加减�
 		{
 			if (x - y > 0 && x - y - z > 0)
 			{
-				cout << x << "-" << y << "-" << z << "=" << x - y - z << endl;
+				cout << x << "-" << y << "-" << z << "=" << endl;
 				subject << x << "-" << y << "-" << z << "=" << x - y - z << endl;//记录到subjecttxt文件中
 
 			}
@@ -83,7 +83,7 @@ void calutaor(int n, ofstream& subject)// 随机出现n个三个 0-100的加减�
 		{
 			if (x - y * z > 0)
 			{
-				cout << x << "-" << y << "*" << z << "=" << x - y * z << endl;
+				cout << x << "-" << y << "*" << z << "=" <<  endl;
 				subject << x << "-" << y << "*" << z << "=" << x - y * z << endl;//记录到subjecttxt文件中
 			}
 			else
@@ -97,7 +97,7 @@ void calutaor(int n, ofstream& subject)// 随机出现n个三个 0-100的加减�
 				o = (double)y / z;
 				if (b == o && x - y / z > 0)
 				{
-					cout << x << "-" << y << "/" << z << "=" << x - y / z << endl;
+					cout << x << "-" << y << "/" << z << "=" <<  endl;
 					subject << x << "-" << y << "/" << z << "=" << x - y / z << endl;//记录到subjecttxt文件中
 
 				}
@@ -110,7 +110,7 @@ void calutaor(int n, ofstream& subject)// 随机出现n个三个 0-100的加减�
 		}//先减后除
 		else if (j == 3 && k == 1)
 		{
-			cout << x << "*" << y << "+" << z << "=" << x * y + z << endl;
+			cout << x << "*" << y << "+" << z << "=" <<endl;
 			subject << x << "*" << y << "+" << z << "=" << x * y + z << endl;//记录到subjecttxt文件中
 
 		}//先乘后加
@@ -118,7 +118,7 @@ void calutaor(int n, ofstream& subject)// 随机出现n个三个 0-100的加减�
 		{
 			if (x * y - z > 0)
 			{
-				cout << x << "*" << y << "-" << z << "=" << x * y - z << endl;
+				cout << x << "*" << y << "-" << z << "=" <<  endl;
 				subject << x << "*" << y << "-" << z << "=" << x * y - z << endl;//记录到subjecttxt文件中
 			}
 			else
@@ -126,7 +126,7 @@ void calutaor(int n, ofstream& subject)// 随机出现n个三个 0-100的加减�
 		}//先乘后减
 		else if (j == 3 && k == 3)
 		{
-			cout << x << "*" << y << "*" << z << "=" << x * y * z << endl;
+			cout << x << "*" << y << "*" << z << "=" << endl;
 			subject << x << "*" << y << "*" << z << "=" << x * y * z << endl;//记录到subjecttxt文件中
 
 		}//都是乘
@@ -138,7 +138,7 @@ void calutaor(int n, ofstream& subject)// 随机出现n个三个 0-100的加减�
 				o = (double)x * y / z;
 				if (o == b)
 				{
-					cout << x << "*" << y << "/" << z << "=" << x * y / z << endl;
+					cout << x << "*" << y << "/" << z << "=" << endl;
 					subject << x << "*" << y << "*" << z << "=" << x * y * z << endl;//记录到subjecttxt文件中
 				}
 				else
@@ -155,7 +155,7 @@ void calutaor(int n, ofstream& subject)// 随机出现n个三个 0-100的加减�
 				o = (double)x / y;
 				if (b == o)
 				{
-					cout << x << "/" << y << "+" << z << "=" << x / y + z << endl;
+					cout << x << "/" << y << "+" << z << "=" << endl;
 					subject << x << "*" << y << "*" << z << "=" << x * y * z << endl;//记录到subjecttxt文件中
 				}
 				else
@@ -172,7 +172,7 @@ void calutaor(int n, ofstream& subject)// 随机出现n个三个 0-100的加减�
 				o = (double)x / y;
 				if (b == o && x / y - z > 0)
 				{
-					cout << x << "/" << y << "-" << z << "=" << x / y - z << endl;
+					cout << x << "/" << y << "-" << z << "=" << endl;
 					subject << x << "/" << y << "-" << z << "=" << x / y - z << endl;//记录到subjecttxt文件中
 
 				}
@@ -191,7 +191,7 @@ void calutaor(int n, ofstream& subject)// 随机出现n个三个 0-100的加减�
 				o = (double)x / y;
 				if (b == o)
 				{
-					cout << x << "/" << y << "*" << z << "=" << x / y * z << endl;
+					cout << x << "/" << y << "*" << z << "=" <<  endl;
 					subject << x << "/" << y << "*" << z << "=" << x / y * z << endl;//记录到subjecttxt文件中
 				}
 				else
@@ -210,7 +210,7 @@ void calutaor(int n, ofstream& subject)// 随机出现n个三个 0-100的加减�
 				p = (double)b / z;
 				if (b == o && h == p)
 				{
-					cout << x << "/" << y << "/" << z << "=" << x / y / z << endl;
+					cout << x << "/" << y << "/" << z << "=" << endl;
 					subject << x << "/" << y << "/" << z << "=" << x / y / z << endl;//记录到subjecttxt文件中
 				}
 				else
