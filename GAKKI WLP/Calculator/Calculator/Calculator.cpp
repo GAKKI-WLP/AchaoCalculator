@@ -10,7 +10,7 @@ void calutaor(int n, ofstream& subject)// 随机出现n个三个 0-100的加减�
 {
 	int a = 0;
 	int x, y, z;//三个0-100的随机数
-	int j, k;//jk来产生0或1的两个随机数，其中 1代表加 2代表减 3为除 4为乘 m为第一个运算符，n为第二个运算符
+	int j, k;//jk来产生1,2,3,3,4的两个随机数，其中 1代表加 2代表减 3为除 4为乘 m为第一个运算符，n为第二个运算符
 	int b,h;//用于检验是否除法中存在小数的情况的辅助变量
 	double o,p;//用于检验是否除法中存在小数的情况
 	for (a = 0; a < n; a++)
@@ -42,7 +42,7 @@ void calutaor(int n, ofstream& subject)// 随机出现n个三个 0-100的加减�
 		}// 先加后乘的情况
 		else if (j == 1 && k == 4)
 		{
-			if (z != 0)
+			if (z != 0)//排除分母为0的情况
 			{
 				b = y / z;
 				o = (double)y / z;
@@ -91,7 +91,7 @@ void calutaor(int n, ofstream& subject)// 随机出现n个三个 0-100的加减�
 		}//先减后乘
 		else if (j == 2 && k == 4)
 		{
-			if (z != 0)
+			if (z != 0)//排除分母为0的情况
 			{
 				b = y / z;
 				o = (double)y / z;
@@ -132,7 +132,7 @@ void calutaor(int n, ofstream& subject)// 随机出现n个三个 0-100的加减�
 		}//都是乘
 		else if (j == 3 && k == 4)
 		{
-			if (z != 0)
+			if (z != 0)//排除分母为0的情况
 			{
 				b = x * y / z;
 				o = (double)x * y / z;
@@ -166,7 +166,7 @@ void calutaor(int n, ofstream& subject)// 随机出现n个三个 0-100的加减�
 		}//先除后加
 		else if (j == 4 && k == 2)
 		{
-			if (y != 0)
+			if (y != 0)//排除分母为0的情况
 			{
 				b = x / y;
 				o = (double)x / y;
@@ -185,7 +185,7 @@ void calutaor(int n, ofstream& subject)// 随机出现n个三个 0-100的加减�
 		}//先除后减
 		else if (j == 4 && k == 3)
 		{
-			if (y != 0)
+			if (y != 0)//排除分母为0的情况
 			{
 				b = x / y;
 				o = (double)x / y;
@@ -233,7 +233,7 @@ int main()
 	subject.open("subject.txt");
 	if (subject.is_open())
 	{
-		cout << "请输入题目的个数" << endl;
+		cout << "请输入题目数目" << endl;
 		cin >> a;
 		calutaor(a, subject);
 		subject.close();
